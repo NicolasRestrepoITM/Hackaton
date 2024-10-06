@@ -2712,24 +2712,27 @@
     ]
   },
   "packageFolders": {
-    "/Users/nicolasrestrepo/.nuget/packages/": {}
+    "C:\\Users\\cmart\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
+      "projectUniqueName": "C:\\Users\\cmart\\VSC_Projects\\Hackaton\\Hackaton.csproj",
       "projectName": "Hackaton",
-      "projectPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
-      "packagesPath": "/Users/nicolasrestrepo/.nuget/packages/",
-      "outputPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/obj/",
+      "projectPath": "C:\\Users\\cmart\\VSC_Projects\\Hackaton\\Hackaton.csproj",
+      "packagesPath": "C:\\Users\\cmart\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cmart\\VSC_Projects\\Hackaton\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nicolasrestrepo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\cmart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2795,7 +2798,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
