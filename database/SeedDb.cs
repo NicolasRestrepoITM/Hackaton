@@ -31,8 +31,8 @@ namespace Hackaton.Database
                 var hackathon = new Hackathon
                 {
                     Name = "Innovación Tecnológica 2024",
-                    StartDate = new DateTime(2024, 6, 1),
-                    EndDate = new DateTime(2024, 6, 3),
+                    StartDate = new DateTime(2024, 6, 1, 0, 0, 0, DateTimeKind.Utc),
+                    EndDate = new DateTime(2024, 6, 3, 0, 0, 0, DateTimeKind.Utc),
                     MainTheme = "Inteligencia Artificial para el Bien Social",
                     OrganizerId = organizer.Id
                 };
@@ -83,7 +83,7 @@ namespace Hackaton.Database
                         Name = "AI for Good",
                         Description = "Una plataforma de IA para conectar voluntarios con causas sociales",
                         DevelopmentStatus = "En progreso",
-                        DeliveryDate = new DateTime(2024, 6, 3),
+                        DeliveryDate = new DateTime(2024, 6, 3, 0, 0, 0, DateTimeKind.Utc),
                         TeamId = team1.Id
                     },
                     new Project
@@ -91,7 +91,7 @@ namespace Hackaton.Database
                         Name = "EcoTech",
                         Description = "Aplicación para optimizar el consumo de energía en hogares",
                         DevelopmentStatus = "En progreso",
-                        DeliveryDate = new DateTime(2024, 6, 3),
+                        DeliveryDate = new DateTime(2024, 6, 3, 0, 0, 0, DateTimeKind.Utc),
                         TeamId = team2.Id
                     }
                 };
