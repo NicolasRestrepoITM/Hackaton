@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj": {}
+    "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj": {}
   },
   "projects": {
-    "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj": {
+    "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
+        "projectUniqueName": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
         "projectName": "Hackaton",
-        "projectPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
+        "projectPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
         "packagesPath": "/Users/nicolasrestrepo/.nuget/packages/",
-        "outputPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/obj/",
+        "outputPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicolasrestrepo/.nuget/NuGet/NuGet.Config"
@@ -48,6 +48,12 @@
               "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
             },
