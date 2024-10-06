@@ -27,7 +27,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization(); // Add this line
+// app.UseAuthorization(); // Add this line
 
 app.MapControllers(); // Add this line to map controller routes
 
@@ -47,3 +47,4 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
+
