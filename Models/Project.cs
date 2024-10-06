@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hackaton.Models
 {
@@ -20,6 +21,8 @@ namespace Hackaton.Models
 
         [Required]
         public int TeamId { get; set; }
+        
+        [ForeignKey("TeamId")]
         public virtual Team? Team { get; set; }
 
         public virtual ICollection<Evaluation>? Evaluations { get; set; }
