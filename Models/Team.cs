@@ -1,20 +1,31 @@
+using System.ComponentModel.DataAnnotations;
 namespace Hackaton.Models
 {
     public class Team
     {
         public int Id { get; set; }
-        public required string Name { get; set; }
-        public int MemberCount { get; set; }
-        public required string DevelopmentExperience { get; set; }
-        public required string DesignExperience { get; set; }
-        public required string ProjectManagementExperience { get; set; }
-
         
-        public int HackathonId { get; set; }
-        public Hackathon Hackathon { get; set; }
+        [Required, StringLength(50)]
+        public string? Name { get; set; }
+        
+        [Range(1, 10)]
+        public int MemberCount { get; set; }
+        
+        [Required, StringLength(50)]
+        public string? DevelopmentExperience { get; set; }
+        
+        [Required, StringLength(50)]
+        public string? DesignExperience { get; set; }
+        
+        [Required, StringLength(50)]
+        public string? ProjectManagementExperience { get; set; }
 
-        public ICollection<Participant> Participants { get; set; }
-        public ICollection<MentorTeam> MentorTeams { get; set; }
-        public Project Project { get; set; }
+        [Required]
+        public int HackathonId { get; set; }
+        public virtual Hackathon? Hackathon { get; set; }
+
+        public virtual ICollection<Participant>? Participants { get; set; }
+        public virtual ICollection<MentorTeam>? MentorTeams { get; set; }
+        public virtual Project? Project { get; set; }
     }
 }

@@ -1,10 +1,15 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Hackaton.Models
 {
     public class Organizer
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        
+        [Required, StringLength(100)]
+        public string? Name { get; set; }
 
-        public ICollection<Hackathon> Hackathons { get; set; }
+        public virtual ICollection<Hackathon>? Hackathons { get; set; }
     }
+
 }

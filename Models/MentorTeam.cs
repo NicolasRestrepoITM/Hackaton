@@ -1,12 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Hackaton.Models
 
 {
     public class MentorTeam
     {
+        [Required]
         public int MentorId { get; set; }
-        public Mentor Mentor { get; set; }
+        public virtual Mentor? Mentor { get; set; }
 
+        [Required]
         public int TeamId { get; set; }
-        public Team Team { get; set; }
+        public virtual Team? Team { get; set; }
     }
 }
