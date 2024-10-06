@@ -2712,19 +2712,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/nicolasrestrepo/.nuget/packages/": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Hackaton\\Hackaton.csproj",
       "projectName": "Hackaton",
-      "projectPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/Hackaton.csproj",
-      "packagesPath": "/Users/nicolasrestrepo/.nuget/packages/",
-      "outputPath": "/Users/nicolasrestrepo/ITM/Construcción/Hackaton/obj/",
+      "projectPath": "C:\\Users\\Asus\\Desktop\\Hackaton\\Hackaton.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus\\Desktop\\Hackaton\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nicolasrestrepo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2795,7 +2795,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
