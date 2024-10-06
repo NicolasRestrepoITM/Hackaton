@@ -16,7 +16,7 @@ namespace Hackaton.Models
         public string? Role { get; set; }
         
         [Required]
-        public int TeamId { get; set; }
+        public int? TeamId { get; set; }
         public virtual Team? Team { get; set; }
     }
 
