@@ -12,5 +12,6 @@ namespace Hackaton.Models
         [Required]
         public int TeamId { get; set; }
         public virtual Team? Team { get; set; }
+        public int Id { get; internal set; }
     }
 }
