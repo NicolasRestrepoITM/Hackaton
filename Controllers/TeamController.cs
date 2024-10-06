@@ -104,7 +104,7 @@ namespace Hackaton.Controllers
         }
 
         // GET: api/Team/Hackathon/5
-        [HttpGet("Hackathon/{hackathonId}")]
+        [HttpGet("hackathon/{hackathonId}")]
         public async Task<ActionResult<IEnumerable<Team>>> GetTeamsByHackathon(int hackathonId)
         {
             return await _context.Teams
@@ -113,26 +113,36 @@ namespace Hackaton.Controllers
         }
 
         // POST: api/Team/AddParticipant
-        [HttpPost("AddParticipant")]
-        public async Task<IActionResult> AddParticipantToTeam(int teamId, int participantId)
+        [HttpPost("addparticipant")]
+        public async Task<IActionResult> AddParticipantToTeam([FromBody] AddParticipantRequest request)
         {
-            var team = await _context.Teams.FindAsync(teamId);
-            var participant = await _context.Participants.FindAsync(participantId);
+            if (request == null || !ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var team = await _context.Teams.FindAsync(request.TeamId);
+            var participant = await _context.Participants.FindAsync(request.ParticipantId);
 
             if (team == null || participant == null)
             {
-                return NotFound();
+                return NotFound("Team or Participant not found.");
             }
 
-            if (participant.TeamId != null)
+            if (participant.TeamId.HasValue)
             {
                 return BadRequest("Participant is already assigned to a team.");
             }
 
-            participant.TeamId = teamId;
+            participant.TeamId = request.TeamId;
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("Participant added to team successfully.");
         }
+    }
+    public class AddParticipantRequest
+    {
+        public int TeamId { get; set; }
+        public int ParticipantId { get; set; }
     }
 }
