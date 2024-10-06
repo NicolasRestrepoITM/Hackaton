@@ -7,5 +7,6 @@ namespace Hackaton.Models
         public required string Email { get; set; }
         public required string Role { get; set; }
         public int TeamId { get; set; }
+        public Team Team { get; set; }
     }
 }

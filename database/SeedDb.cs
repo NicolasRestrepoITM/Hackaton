@@ -10,14 +10,22 @@ namespace Hackaton.Database
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new DatabaseContex(
-                serviceProvider.GetRequiredService<DbContextOptions<DatabaseContex>>()))
+            using (var context = new DatabaseContext(
+                serviceProvider.GetRequiredService<DbContextOptions<DatabaseContext>>()))
             {
                 // Verifica si la base de datos ya tiene datos
                 if (context.Hackathons.Any())
                 {
                     return;   // La base de datos ya ha sido sembrada
                 }
+
+                // Organizador
+                var organizer = new Organizer
+                {
+                    Name = "Tech Innovators"
+                };
+                context.Organizers.Add(organizer);
+                context.SaveChanges();
 
                 // Hackathon
                 var hackathon = new Hackathon
@@ -26,7 +34,7 @@ namespace Hackaton.Database
                     StartDate = new DateTime(2024, 6, 1),
                     EndDate = new DateTime(2024, 6, 3),
                     MainTheme = "Inteligencia Artificial para el Bien Social",
-                    Organizer = "Tech Innovators"
+                    OrganizerId = organizer.Id
                 };
                 context.Hackathons.Add(hackathon);
                 context.SaveChanges();
@@ -38,7 +46,8 @@ namespace Hackaton.Database
                     MemberCount = 4,
                     DevelopmentExperience = "Avanzado",
                     DesignExperience = "Intermedio",
-                    ProjectManagementExperience = "Intermedio"
+                    ProjectManagementExperience = "Intermedio",
+                    HackathonId = hackathon.Id
                 };
                 var team2 = new Team
                 {
@@ -46,7 +55,8 @@ namespace Hackaton.Database
                     MemberCount = 3,
                     DevelopmentExperience = "Intermedio",
                     DesignExperience = "Avanzado",
-                    ProjectManagementExperience = "Principiante"
+                    ProjectManagementExperience = "Principiante",
+                    HackathonId = hackathon.Id
                 };
                 context.Teams.AddRange(team1, team2);
                 context.SaveChanges();
@@ -74,8 +84,7 @@ namespace Hackaton.Database
                         Description = "Una plataforma de IA para conectar voluntarios con causas sociales",
                         DevelopmentStatus = "En progreso",
                         DeliveryDate = new DateTime(2024, 6, 3),
-                        TeamId = team1.Id,
-                        HackathonId = hackathon.Id
+                        TeamId = team1.Id
                     },
                     new Project
                     {
@@ -83,8 +92,7 @@ namespace Hackaton.Database
                         Description = "Aplicación para optimizar el consumo de energía en hogares",
                         DevelopmentStatus = "En progreso",
                         DeliveryDate = new DateTime(2024, 6, 3),
-                        TeamId = team2.Id,
-                        HackathonId = hackathon.Id
+                        TeamId = team2.Id
                     }
                 };
                 context.Projects.AddRange(projects);
@@ -107,6 +115,15 @@ namespace Hackaton.Database
                     }
                 };
                 context.Mentors.AddRange(mentors);
+                context.SaveChanges();
+
+                // MentorTeams
+                var mentorTeams = new[]
+                {
+                    new MentorTeam { MentorId = mentors[0].Id, TeamId = team1.Id },
+                    new MentorTeam { MentorId = mentors[1].Id, TeamId = team2.Id }
+                };
+                context.MentorTeams.AddRange(mentorTeams);
                 context.SaveChanges();
 
                 // Evaluaciones
