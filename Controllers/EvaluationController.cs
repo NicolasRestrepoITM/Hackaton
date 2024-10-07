@@ -7,28 +7,30 @@ using System.Threading.Tasks;
 
 namespace Hackaton.Controllers
 {
-    [Route("api/evaluation")]
+    [Route("api/evaluations")]
     [ApiController]
-    public class EvaluationController : ControllerBase
+    public class EvaluationsController : ControllerBase
     {
         private readonly DatabaseContext _context;
 
-        public EvaluationController(DatabaseContext context)
+        public EvaluationsController(DatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: api/evaluation
+        // GET: api/evaluations
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Evaluation>>> GetEvaluations()
         {
-            return await _context.Evaluations
-                                 .Include(e => e.Project)
-                                 .Include(e => e.Mentor)
-                                 .ToListAsync();
+            var evaluations = await _context.Evaluations
+                                             .Include(e => e.Project)
+                                             .Include(e => e.Mentor)
+                                             .ToListAsync();
+
+            return Ok(evaluations);
         }
 
-        // GET: api/evaluation/5
+        // GET: api/evaluations/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Evaluation>> GetEvaluation(int id)
         {
@@ -42,10 +44,10 @@ namespace Hackaton.Controllers
                 return NotFound();
             }
 
-            return evaluation;
+            return Ok(evaluation);
         }
 
-        // POST: api/evaluation
+        // POST: api/evaluations
         [HttpPost]
         public async Task<ActionResult<Evaluation>> PostEvaluation(Evaluation evaluation)
         {
@@ -60,13 +62,13 @@ namespace Hackaton.Controllers
             return CreatedAtAction(nameof(GetEvaluation), new { id = evaluation.Id }, evaluation);
         }
 
-        // PUT: api/evaluation/5
+        // PUT: api/evaluations/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEvaluation(int id, Evaluation evaluation)
         {
             if (id != evaluation.Id)
             {
-                return BadRequest();
+                return BadRequest("Evaluation ID mismatch.");
             }
 
             _context.Entry(evaluation).State = EntityState.Modified;
@@ -79,7 +81,7 @@ namespace Hackaton.Controllers
             {
                 if (!EvaluationExists(id))
                 {
-                    return NotFound();
+                    return NotFound("Evaluation not found.");
                 }
                 else
                 {
@@ -90,14 +92,14 @@ namespace Hackaton.Controllers
             return NoContent();
         }
 
-        // DELETE: api/evaluation/5
+        // DELETE: api/evaluations/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEvaluation(int id)
         {
             var evaluation = await _context.Evaluations.FindAsync(id);
             if (evaluation == null)
             {
-                return NotFound();
+                return NotFound("Evaluation not found.");
             }
 
             _context.Evaluations.Remove(evaluation);
