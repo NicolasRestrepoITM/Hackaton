@@ -2712,11 +2712,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\cmart\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
+>>>>>>> da41d2788710a69940ce8923e692a59dbc17fea7
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\cmart\\VSC_Projects\\Hackaton\\Hackaton.csproj",
       "projectName": "Hackaton",
       "projectPath": "C:\\Users\\cmart\\VSC_Projects\\Hackaton\\Hackaton.csproj",
@@ -2726,6 +2731,16 @@
       "configFilePaths": [
         "C:\\Users\\cmart\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Hackaton\\Hackaton.csproj",
+      "projectName": "Hackaton",
+      "projectPath": "C:\\Users\\Asus\\Desktop\\Hackaton\\Hackaton.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus\\Desktop\\Hackaton\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> da41d2788710a69940ce8923e692a59dbc17fea7
       ],
       "originalTargetFrameworks": [
         "net8.0"
