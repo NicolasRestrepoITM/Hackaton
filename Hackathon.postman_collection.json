@@ -1,0 +1,2374 @@
+{
+	"info": {
+		"_postman_id": "06044789-a022-4dbc-a159-71e7ff1a3493",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33039826"
+	},
+	"item": [
+		{
+			"name": "Hackathon",
+			"item": [
+				{
+					"name": "Get Hackathons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/hackaton",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"hackaton"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Hackathons",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/hackaton",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"hackaton"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 18:41:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Innovación Tecnológica 2024\",\n        \"startDate\": \"2024-06-01T00:00:00Z\",\n        \"endDate\": \"2024-06-03T00:00:00Z\",\n        \"mainTheme\": \"Inteligencia Artificial para el Bien Social\",\n        \"organizerId\": 1,\n        \"organizer\": null,\n        \"teams\": null,\n        \"mentors\": null,\n        \"prizes\": null\n    }\n]"
+						},
+						{
+							"name": "Get Hackathons",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/hackaton",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"hackaton"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 18:48:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Innovación Tecnológica 2024\",\n        \"startDate\": \"2024-06-01T00:00:00Z\",\n        \"endDate\": \"2024-06-03T00:00:00Z\",\n        \"mainTheme\": \"Inteligencia Artificial para el Bien Social\",\n        \"organizerId\": 1,\n        \"organizer\": null,\n        \"teams\": null,\n        \"mentors\": null,\n        \"prizes\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Innovación Tecnológica 2025 - Edición Especial\",\n        \"startDate\": \"2025-06-15T10:00:00Z\",\n        \"endDate\": \"2025-06-17T18:00:00Z\",\n        \"mainTheme\": \"Inteligencia Artificial y Cambio Climático\",\n        \"organizerId\": 1,\n        \"organizer\": null,\n        \"teams\": null,\n        \"mentors\": null,\n        \"prizes\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Hackthon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Innovación Tecnológica 2025\",\n  \"startDate\": \"2025-06-01T09:00:00Z\",\n  \"endDate\": \"2025-06-03T18:00:00Z\",\n  \"mainTheme\": \"Pawtrack\",\n  \"organizerId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/hackaton",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"hackaton"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Hackathon",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Innovación Tecnológica 2025\",\n  \"startDate\": \"2025-06-01T09:00:00Z\",\n  \"endDate\": \"2025-06-03T18:00:00Z\",\n  \"mainTheme\": \"Pawtrack\",\n  \"organizerId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/hackaton",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"hackaton"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 18:45:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5000/api/hackaton/2"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Innovación Tecnológica 2025\",\n    \"startDate\": \"2025-06-01T09:00:00Z\",\n    \"endDate\": \"2025-06-03T18:00:00Z\",\n    \"mainTheme\": \"Pawtrack\",\n    \"organizerId\": 1,\n    \"organizer\": null,\n    \"teams\": null,\n    \"mentors\": null,\n    \"prizes\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Modify Hackathon",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"Innovación Tecnológica 2025\",\n    \"startDate\": \"2025-06-01T09:00:00Z\",\n    \"endDate\": \"2025-06-03T18:00:00Z\",\n    \"mainTheme\": \"Pawtrack v2\",\n    \"organizerId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/hackaton/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"hackaton",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Hackathon",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Innovación Tecnológica 2025\",\n  \"startDate\": \"2025-06-01T09:00:00Z\",\n  \"endDate\": \"2025-06-03T18:00:00Z\",\n  \"mainTheme\": \"Pawtrack\",\n  \"organizerId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/hackaton",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"hackaton"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 18:45:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5000/api/hackaton/2"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Innovación Tecnológica 2025\",\n    \"startDate\": \"2025-06-01T09:00:00Z\",\n    \"endDate\": \"2025-06-03T18:00:00Z\",\n    \"mainTheme\": \"Pawtrack\",\n    \"organizerId\": 1,\n    \"organizer\": null,\n    \"teams\": null,\n    \"mentors\": null,\n    \"prizes\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Hackathon by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/hackaton/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"hackaton",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Hackathons by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/hackaton/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"hackaton",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 18:42:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Innovación Tecnológica 2024\",\n    \"startDate\": \"2024-06-01T00:00:00Z\",\n    \"endDate\": \"2024-06-03T00:00:00Z\",\n    \"mainTheme\": \"Inteligencia Artificial para el Bien Social\",\n    \"organizerId\": 1,\n    \"organizer\": null,\n    \"teams\": null,\n    \"mentors\": null,\n    \"prizes\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Hackathon by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/hackaton/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"hackaton",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organizations",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/organizer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"organizer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomCompanyName}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/organizer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"organizer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"{{$randomCompanyName}}\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/organizer/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"organizer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/organizer/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"organizer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/organizer/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"organizer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evaluation",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/evaluation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"evaluation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/evaluation",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"evaluation"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2024 01:33:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"projectId\": 1,\n        \"mentorId\": 1,\n        \"score\": 85,\n        \"comments\": \"Excelente concepto con un gran potencial de impacto social. Necesita mejorar en la implementación técnica.\",\n        \"project\": null,\n        \"mentor\": null\n    },\n    {\n        \"id\": 2,\n        \"projectId\": 2,\n        \"mentorId\": 2,\n        \"score\": 90,\n        \"comments\": \"Idea innovadora y bien ejecutada. Considerar ampliar el alcance para incluir empresas.\",\n        \"project\": null,\n        \"mentor\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"projectId\": 1,\n    \"mentorId\": 1,\n    \"score\": {{$randomAlphaNumeric}},\n    \"comments\": \"Excelente concepto con un gran potencial de impacto social. Necesita mejorar en la implementación técnica.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/evaluation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"evaluation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"projectId\": 1,\n    \"mentorId\": 1,\n    \"score\": 85,\n    \"comments\": \"Excelente concepto con un gran potencial de impacto social. Necesita mejorar en la implementación técnica.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/evaluation",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"evaluation"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2024 01:34:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5000/api/evaluation/3"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"projectId\": 1,\n    \"mentorId\": 1,\n    \"score\": 85,\n    \"comments\": \"Excelente concepto con un gran potencial de impacto social. Necesita mejorar en la implementación técnica.\",\n    \"project\": null,\n    \"mentor\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"projectId\": 1,\n    \"mentorId\": 1,\n    \"score\": 85,\n    \"comments\": \"Excelente concepto con un gran potencial de impacto social. Necesita mejorar en la implementación técnica.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/evaluation/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"evaluation",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Modify",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 3,\n    \"projectId\": 1,\n    \"mentorId\": 1,\n    \"score\": 85,\n    \"comments\": \"Excelente concepto con un gran potencial de impacto social. Necesita mejorar en la implementación técnica.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/evaluation/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"evaluation",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2024 01:37:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/evaluation/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"evaluation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/evaluation/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"evaluation",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Participant",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/participant",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"participant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/participant",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"participant"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2024 01:43:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Ana García\",\n        \"email\": \"ana@example.com\",\n        \"role\": \"Desarrollador\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Carlos López\",\n        \"email\": \"carlos@example.com\",\n        \"role\": \"Diseñador\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Elena Martínez\",\n        \"email\": \"elena@example.com\",\n        \"role\": \"Líder\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 4,\n        \"name\": \"David Rodríguez\",\n        \"email\": \"david@example.com\",\n        \"role\": \"Desarrollador\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Sofia Pérez\",\n        \"email\": \"sofia@example.com\",\n        \"role\": \"Diseñador\",\n        \"teamId\": 2,\n        \"team\": null\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Miguel Sánchez\",\n        \"email\": \"miguel@example.com\",\n        \"role\": \"Desarrollador\",\n        \"teamId\": 2,\n        \"team\": null\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Laura Torres\",\n        \"email\": \"laura@example.com\",\n        \"role\": \"Líder\",\n        \"teamId\": 2,\n        \"team\": null\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Sasha Gleichner\",\n        \"email\": \"Rossie_Abbott11@example.org\",\n        \"role\": \"Empleado\",\n        \"teamId\": 1,\n        \"team\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"{{$randomFirstName}} {{$randomLastName}}\",\n        \"email\": \"{{$randomExampleEmail}}\",\n        \"role\": \"Empleado\",\n        \"teamId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/participant",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"participant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n        \"name\": \"{{$randomFirstName}} {{$randomLastName}}\",\n        \"email\": \"{{$randomExampleEmail}}\",\n        \"role\": \"Empleado\",\n        \"teamId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/participant/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"participant",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/participant/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"participant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/participant/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"participant",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prize",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/prize",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"prize"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/participant",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"participant"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2024 01:43:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Ana García\",\n        \"email\": \"ana@example.com\",\n        \"role\": \"Desarrollador\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Carlos López\",\n        \"email\": \"carlos@example.com\",\n        \"role\": \"Diseñador\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Elena Martínez\",\n        \"email\": \"elena@example.com\",\n        \"role\": \"Líder\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 4,\n        \"name\": \"David Rodríguez\",\n        \"email\": \"david@example.com\",\n        \"role\": \"Desarrollador\",\n        \"teamId\": 1,\n        \"team\": null\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Sofia Pérez\",\n        \"email\": \"sofia@example.com\",\n        \"role\": \"Diseñador\",\n        \"teamId\": 2,\n        \"team\": null\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Miguel Sánchez\",\n        \"email\": \"miguel@example.com\",\n        \"role\": \"Desarrollador\",\n        \"teamId\": 2,\n        \"team\": null\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Laura Torres\",\n        \"email\": \"laura@example.com\",\n        \"role\": \"Líder\",\n        \"teamId\": 2,\n        \"team\": null\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Sasha Gleichner\",\n        \"email\": \"Rossie_Abbott11@example.org\",\n        \"role\": \"Empleado\",\n        \"teamId\": 1,\n        \"team\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"{{$randomAlphaNumeric}} Lugar\",\n        \"description\": \"10,000€ en efectivo y 6 meses de mentoría {{$randomPhrase}}\",\n        \"hackathonId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/prize",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"prize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"name\": \"cuarto Lugar\",\n    \"description\": \"10,000€ en efectivo y 6 meses de mentoría Try to program the RAM pixel, maybe it will connect the bluetooth driver!\",\n    \"hackathonId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/prize/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"prize",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/prize/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"prize",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/prize/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"prize",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mentor",
+			"item": [
+				{
+					"name": "Get Mentor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/mentor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"mentor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Mentor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/mentor",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"mentor"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2024 00:28:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Dr. Laura Sánchez\",\n        \"email\": \"laura.sanchez@example.com\",\n        \"expertiseArea\": \"Inteligencia Artificial y Aprendizaje Automático\",\n        \"hackathons\": null,\n        \"mentorTeams\": null,\n        \"evaluations\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Ing. Roberto Gómez\",\n        \"email\": \"roberto.gomez@example.com\",\n        \"expertiseArea\": \"Desarrollo Web y Móvil\",\n        \"hackathons\": null,\n        \"mentorTeams\": null,\n        \"evaluations\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Mentor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFirstName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"expertiseArea\": \"{{$randomJobArea}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/mentor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"mentor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Mentor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"{{$randomFirstName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"expertiseArea\": \"{{$randomJobArea}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/mentor",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"mentor"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2024 00:32:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5000/api/mentor/3"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"name\": \"Karson\",\n    \"email\": \"Emerald.Gusikowski@yahoo.com\",\n    \"expertiseArea\": \"Marketing\",\n    \"hackathons\": null,\n    \"mentorTeams\": null,\n    \"evaluations\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Modify mentor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"Karson\",\n    \"email\": \"Emerald.Gusikowski@yahoo.com\",\n    \"expertiseArea\": \"Software\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/mentor/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"mentor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get mentor by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/mentor/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"mentor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hackathon by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/mentor/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"mentor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Get Project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"project"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Project",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/project",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"project"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:30:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"AI for Good\",\n        \"description\": \"Una plataforma de IA para conectar voluntarios con causas sociales\",\n        \"developmentStatus\": \"En progreso\",\n        \"deliveryDate\": \"2024-06-03T00:00:00Z\",\n        \"teamId\": 1,\n        \"team\": null,\n        \"evaluations\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"EcoTech\",\n        \"description\": \"Aplicación para optimizar el consumo de energía en hogares\",\n        \"developmentStatus\": \"En progreso\",\n        \"deliveryDate\": \"2024-06-03T00:00:00Z\",\n        \"teamId\": 2,\n        \"team\": null,\n        \"evaluations\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Project by team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/project/team/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"project",
+								"team",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Project by team id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/project/team/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"project",
+										"team",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:41:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"AI for Good\",\n    \"description\": \"Una plataforma de IA para conectar voluntarios con causas sociales\",\n    \"developmentStatus\": \"En progreso\",\n    \"deliveryDate\": \"2024-06-03T00:00:00Z\",\n    \"teamId\": 1,\n    \"team\": null,\n    \"evaluations\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"AI for Climate Change\",\n  \"description\": \"Un proyecto que utiliza IA para predecir y mitigar los efectos del cambio climático\",\n  \"developmentStatus\": \"En progreso\",\n  \"deliveryDate\": \"2025-06-03T18:00:00Z\",\n  \"teamId\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"project"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Project",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"AI for Climate Change\",\n  \"description\": \"Un proyecto que utiliza IA para predecir y mitigar los efectos del cambio climático\",\n  \"developmentStatus\": \"En progreso\",\n  \"deliveryDate\": \"2025-06-03T18:00:00Z\",\n  \"teamId\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/project",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"project"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:38:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5000/api/project/13"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 13,\n    \"name\": \"AI for Climate Change\",\n    \"description\": \"Un proyecto que utiliza IA para predecir y mitigar los efectos del cambio climático\",\n    \"developmentStatus\": \"En progreso\",\n    \"deliveryDate\": \"2025-06-03T18:00:00Z\",\n    \"teamId\": 4,\n    \"team\": null,\n    \"evaluations\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Modify Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 13,\n    \"name\": \"AI for Climate Change v2\",\n    \"description\": \"Un proyecto que utiliza IA para predecir y mitigar los efectos del cambio climático\",\n    \"developmentStatus\": \"En progreso\",\n    \"deliveryDate\": \"2025-06-03T18:00:00Z\",\n    \"teamId\": 4,\n    \"team\": null,\n    \"evaluations\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/project/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"project",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Project status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"newStatus\": \"En progreso\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/project/1/updatestatus",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"project",
+								"1",
+								"updatestatus"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Modify Project Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"newStatus\": \"En progreso\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/project/1/updatestatus",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"project",
+										"1",
+										"updatestatus"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:48:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Estado del proyecto actualizado exitosamente a 'En progreso'."
+						}
+					]
+				},
+				{
+					"name": "Get project by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/project/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"project",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Hackathon by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/project/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"project",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:39:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"AI for Good\",\n    \"description\": \"Una plataforma de IA para conectar voluntarios con causas sociales\",\n    \"developmentStatus\": \"En progreso\",\n    \"deliveryDate\": \"2024-06-03T00:00:00Z\",\n    \"teamId\": 1,\n    \"team\": null,\n    \"evaluations\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete project by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/project/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"project",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "Get Team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/team",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"team"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Team",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/team",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"team"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:08:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"CodeCrafters\",\n        \"memberCount\": 4,\n        \"developmentExperience\": \"Avanzado\",\n        \"designExperience\": \"Intermedio\",\n        \"projectManagementExperience\": \"Intermedio\",\n        \"hackathonId\": 1,\n        \"hackathon\": null,\n        \"participants\": null,\n        \"mentorTeams\": null,\n        \"project\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Innovation Wizards\",\n        \"memberCount\": 3,\n        \"developmentExperience\": \"Intermedio\",\n        \"designExperience\": \"Avanzado\",\n        \"projectManagementExperience\": \"Principiante\",\n        \"hackathonId\": 1,\n        \"hackathon\": null,\n        \"participants\": null,\n        \"mentorTeams\": null,\n        \"project\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Teams By Hackathon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/team/hackathon/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"team",
+								"hackathon",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Teams By Hackathon",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/team/hackathon/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"team",
+										"hackathon",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:18:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"CodeCrafters\",\n        \"memberCount\": 4,\n        \"developmentExperience\": \"Avanzado\",\n        \"designExperience\": \"Intermedio\",\n        \"projectManagementExperience\": \"Intermedio\",\n        \"hackathonId\": 1,\n        \"hackathon\": null,\n        \"participants\": null,\n        \"mentorTeams\": null,\n        \"project\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Innovation Wizards\",\n        \"memberCount\": 3,\n        \"developmentExperience\": \"Intermedio\",\n        \"designExperience\": \"Avanzado\",\n        \"projectManagementExperience\": \"Principiante\",\n        \"hackathonId\": 1,\n        \"hackathon\": null,\n        \"participants\": null,\n        \"mentorTeams\": null,\n        \"project\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Innovadores Tech\",\n  \"memberCount\": 4,\n  \"developmentExperience\": \"Avanzado\",\n  \"designExperience\": \"Intermedio\",\n  \"projectManagementExperience\": \"Principiante\",\n  \"hackathonId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/team",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"team"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Innovadores Tech\",\n  \"memberCount\": 4,\n  \"developmentExperience\": \"Avanzado\",\n  \"designExperience\": \"Intermedio\",\n  \"projectManagementExperience\": \"Principiante\",\n  \"hackathonId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/team",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"team"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:09:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5000/api/team/3"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"name\": \"Innovadores Tech\",\n    \"memberCount\": 4,\n    \"developmentExperience\": \"Avanzado\",\n    \"designExperience\": \"Intermedio\",\n    \"projectManagementExperience\": \"Principiante\",\n    \"hackathonId\": 1,\n    \"hackathon\": null,\n    \"participants\": null,\n    \"mentorTeams\": null,\n    \"project\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "add participant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teamId\": 1,\n  \"participantId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/team/addparticipant",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"team",
+								"addparticipant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Team Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teamId\": 1,\n  \"participantId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/team/addparticipant",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"team",
+										"addparticipant"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:23:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Participant is already assigned to a team."
+						}
+					]
+				},
+				{
+					"name": "Modify team",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"Innovadores Tech\",\n    \"memberCount\": 4,\n    \"developmentExperience\": \"Avanzado\",\n    \"designExperience\": \"Intermedio\",\n    \"projectManagementExperience\": \"Principiante\",\n    \"hackathonId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/team/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"team",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get team by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/team/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"team",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Hackathon by id Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/team/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"team",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 22:11:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Innovation Wizards\",\n    \"memberCount\": 3,\n    \"developmentExperience\": \"Intermedio\",\n    \"designExperience\": \"Avanzado\",\n    \"projectManagementExperience\": \"Principiante\",\n    \"hackathonId\": 1,\n    \"hackathon\": null,\n    \"participants\": null,\n    \"mentorTeams\": null,\n    \"project\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Team by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/team/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"team",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
