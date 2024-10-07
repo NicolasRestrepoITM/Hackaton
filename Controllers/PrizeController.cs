@@ -1,72 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hackaton.Models;
 using Hackaton.Database;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Hackaton.Controllers
 {
-    [Route("api/prizes")]
+    [Route("api/prize")]
     [ApiController]
-    public class PrizesController : ControllerBase
+    public class PrizeController : ControllerBase
     {
         private readonly DatabaseContext _context;
 
-        public PrizesController(DatabaseContext context)
+        public PrizeController(DatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: api/prizes
+        // GET: api/Prize
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Prize>>> GetPrizes()
         {
-            var prizes = await _context.Prizes
-                                        .Include(p => p.Hackathon) // Incluir hackathon relacionado
-                                        .ToListAsync();
-
-            return Ok(prizes);
+            return await _context.Prizes.ToListAsync();
         }
 
-        // GET: api/prizes/5
+        // GET: api/Prize/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Prize>> GetPrize(int id)
         {
-            var prize = await _context.Prizes
-                                       .Include(p => p.Hackathon) // Incluir hackathon relacionado
-                                       .FirstOrDefaultAsync(p => p.Id == id);
+            var prize = await _context.Prizes.FindAsync(id);
 
             if (prize == null)
             {
-                return NotFound("Prize not found.");
+                return NotFound();
             }
 
-            return Ok(prize);
+            return prize;
         }
 
-        // POST: api/prizes
+        // POST: api/Prize
         [HttpPost]
         public async Task<ActionResult<Prize>> PostPrize(Prize prize)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             _context.Prizes.Add(prize);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetPrize), new { id = prize.Id }, prize);
         }
 
-        // PUT: api/prizes/5
+        // PUT: api/Prize/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPrize(int id, Prize prize)
         {
             if (id != prize.Id)
             {
-                return BadRequest("Prize ID mismatch.");
+                return BadRequest();
             }
 
             _context.Entry(prize).State = EntityState.Modified;
@@ -79,7 +70,7 @@ namespace Hackaton.Controllers
             {
                 if (!PrizeExists(id))
                 {
-                    return NotFound("Prize not found.");
+                    return NotFound();
                 }
                 else
                 {
@@ -90,14 +81,14 @@ namespace Hackaton.Controllers
             return NoContent();
         }
 
-        // DELETE: api/prizes/5
+        // DELETE: api/Prize/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePrize(int id)
         {
             var prize = await _context.Prizes.FindAsync(id);
             if (prize == null)
             {
-                return NotFound("Prize not found.");
+                return NotFound();
             }
 
             _context.Prizes.Remove(prize);
@@ -108,7 +99,26 @@ namespace Hackaton.Controllers
 
         private bool PrizeExists(int id)
         {
-            return _context.Prizes.Any(p => p.Id == id);
+            return _context.Prizes.Any(e => e.Id == id);
+        }
+
+        // GET: api/Prize/ByHackathon/5
+        [HttpGet("ByHackathon/{hackathonId}")]
+        public async Task<ActionResult<IEnumerable<Prize>>> GetPrizesByHackathon(int hackathonId)
+        {
+            return await _context.Prizes
+                .Where(p => p.HackathonId == hackathonId)
+                .ToListAsync();
+        }
+
+        // GET: api/Prize/TopPrizes/5
+        [HttpGet("TopPrizes/{count}")]
+        public async Task<ActionResult<IEnumerable<Prize>>> GetTopPrizes(int count)
+        {
+            return await _context.Prizes
+                .OrderByDescending(p => p.Id)  // Assuming newer prizes have higher IDs
+                .Take(count)
+                .ToListAsync();
         }
     }
 }

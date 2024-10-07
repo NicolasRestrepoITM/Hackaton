@@ -1,72 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hackaton.Models;
 using Hackaton.Database;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Hackaton.Controllers
 {
-    [Route("api/participants")]
+    [Route("api/participan")]
     [ApiController]
-    public class ParticipantsController : ControllerBase
+    public class ParticipantController : ControllerBase
     {
         private readonly DatabaseContext _context;
 
-        public ParticipantsController(DatabaseContext context)
+        public ParticipantController(DatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: api/participants
+        // GET: api/Participant
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Participant>>> GetParticipants()
         {
-            var participants = await _context.Participants
-                                              .Include(p => p.Team) // Incluir equipo relacionado
-                                              .ToListAsync();
-
-            return Ok(participants);
+            return await _context.Participants.ToListAsync();
         }
 
-        // GET: api/participants/5
+        // GET: api/Participant/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Participant>> GetParticipant(int id)
         {
-            var participant = await _context.Participants
-                                             .Include(p => p.Team) // Incluir equipo relacionado
-                                             .FirstOrDefaultAsync(p => p.Id == id);
+            var participant = await _context.Participants.FindAsync(id);
 
             if (participant == null)
             {
-                return NotFound("Participant not found.");
+                return NotFound();
             }
 
-            return Ok(participant);
+            return participant;
         }
 
-        // POST: api/participants
+        // POST: api/Participant
         [HttpPost]
         public async Task<ActionResult<Participant>> PostParticipant(Participant participant)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             _context.Participants.Add(participant);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetParticipant), new { id = participant.Id }, participant);
         }
 
-        // PUT: api/participants/5
+        // PUT: api/Participant/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutParticipant(int id, Participant participant)
         {
             if (id != participant.Id)
             {
-                return BadRequest("Participant ID mismatch.");
+                return BadRequest();
             }
 
             _context.Entry(participant).State = EntityState.Modified;
@@ -79,7 +70,7 @@ namespace Hackaton.Controllers
             {
                 if (!ParticipantExists(id))
                 {
-                    return NotFound("Participant not found.");
+                    return NotFound();
                 }
                 else
                 {
@@ -90,14 +81,14 @@ namespace Hackaton.Controllers
             return NoContent();
         }
 
-        // DELETE: api/participants/5
+        // DELETE: api/Participant/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteParticipant(int id)
         {
             var participant = await _context.Participants.FindAsync(id);
             if (participant == null)
             {
-                return NotFound("Participant not found.");
+                return NotFound();
             }
 
             _context.Participants.Remove(participant);
@@ -108,7 +99,16 @@ namespace Hackaton.Controllers
 
         private bool ParticipantExists(int id)
         {
-            return _context.Participants.Any(p => p.Id == id);
+            return _context.Participants.Any(e => e.Id == id);
+        }
+
+        // GET: api/Participant/ByTeam/5
+        [HttpGet("ByTeam/{teamId}")]
+        public async Task<ActionResult<IEnumerable<Participant>>> GetParticipantsByTeam(int teamId)
+        {
+            return await _context.Participants
+                .Where(p => p.TeamId == teamId)
+                .ToListAsync();
         }
     }
 }
