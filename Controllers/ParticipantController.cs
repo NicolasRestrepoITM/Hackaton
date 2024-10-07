@@ -9,7 +9,7 @@ using Hackaton.Database;
 
 namespace Hackaton.Controllers
 {
-    [Route("api/participan")]
+    [Route("api/participant")]
     [ApiController]
     public class ParticipantController : ControllerBase
     {
