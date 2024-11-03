@@ -4,8 +4,19 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configurar CORS primero
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+    );
+});
+
 // Add services to the container.
-builder.Services.AddControllers(); // Add this line to enable controllers
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -25,11 +36,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hackathon API v1"));
 }
 
+// Importante: El orden correcto del middleware
 app.UseHttpsRedirection();
+app.UseRouting(); // Primero UseRouting
 
-// app.UseAuthorization(); // Add this line
+app.UseCors("AllowReactApp"); // Después UseCors
 
-app.MapControllers(); // Add this line to map controller routes
+app.UseAuthorization(); // Luego UseAuthorization
+
+app.MapControllers(); // Finalmente MapControllers
+
+// Eliminar esta línea si existe
+// app.UseCustomCors();
 
 // Seed the database
 using (var scope = app.Services.CreateScope())
@@ -47,4 +65,3 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
-

@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hackaton.Models;
@@ -11,6 +8,8 @@ namespace Hackaton.Controllers
 {
     [Route("api/prize")]
     [ApiController]
+    [EnableCors("AllowReactApp")]
+
     public class PrizeController : ControllerBase
     {
         private readonly DatabaseContext _context;

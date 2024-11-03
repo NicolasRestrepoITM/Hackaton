@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
 using Hackaton.Models;
 using Hackaton.Database;
@@ -7,6 +8,8 @@ namespace Hackaton.Controllers
 {
     [Route("api/mentorteam")]
     [ApiController]
+    [EnableCors("AllowReactApp")]
+
     public class MentorTeamController : ControllerBase
     {
         private readonly DatabaseContext _context;
