@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hackaton.Models;
@@ -7,6 +8,7 @@ namespace Hackaton.Controllers
 {
     [Route("api/team")]
     [ApiController]
+    [EnableCors("AllowReactApp")]
     public class TeamController : ControllerBase
     {
         private readonly DatabaseContext _context;
